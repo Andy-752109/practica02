@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
   
-  // Función para crear una tarjeta HTML con el producto
+
   function crearTarjeta(product) {
     return `
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">

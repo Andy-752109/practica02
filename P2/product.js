@@ -1,4 +1,4 @@
-// product.js
+
 
 class ProductException extends Error {
   constructor(message) {
@@ -16,7 +16,7 @@ class Product {
     this._id = _id;
   }
 
-  // GETTERS
+
   get title() {
     return this._title;
   }
@@ -37,7 +37,7 @@ class Product {
     return this._id;
   }
 
-  // SETTERS con validación
+
   set title(value) {
     if (!value || value.trim() === "") {
       throw new ProductException("El título es obligatorio.");
@@ -70,7 +70,6 @@ class Product {
     this._id = value;
   }
 
-  // Métodos para crear desde JSON u objeto JS
   static createFromJson(jsonValue) {
     const obj = JSON.parse(jsonValue);
     return Product.createFromObject(obj);

@@ -8,7 +8,7 @@ let offset = 0;
 const limit = 12;
 
 async function loadPokedex(offsetValue = 0) {
-  pokedex.innerHTML = ""; // Limpia la pokédex al cambiar página
+  pokedex.innerHTML = ""; 
 
   try {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offsetValue}`);
@@ -18,7 +18,7 @@ async function loadPokedex(offsetValue = 0) {
       await loadPokemonDetails(pokemon.url);
     }
 
-    // Desactivar botón "Anterior" si estamos al inicio
+
     prevBtn.disabled = offsetValue === 0;
 
   } catch (error) {
@@ -50,5 +50,5 @@ nextBtn.addEventListener("click", () => {
   loadPokedex(offset);
 });
 
-// Cargar la primera página
+
 loadPokedex();
